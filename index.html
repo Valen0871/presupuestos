@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Presupuesto Automotores</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+        }
+
+        input, select, button{
+            margin:5px;
+            padding:5px;
+        }
+
+        table{
+            border-collapse: collapse;
+            width:100%;
+            margin-top:20px;
+        }
+
+        th, td{
+            border:1px solid black;
+            padding:8px;
+            text-align:center;
+        }
+
+        th{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Presupuesto de Automotores</h2>
+    <form id="formulario">
+        <label>Cliente:</label>
+        <input type="text" id="cliente" required>
+        <label>Vehículo:</label>
+        <select id="vehiculo"></select>
+        <button type="submit">Agregar Presupuesto</button>
+    </form>
+    <br>
+    <label>Buscar Cliente:</label>
+    <input type="text" id="buscarCliente">
+    <button onclick="buscarPorCliente()">Buscar</button>
+    <br><br>
+    <label>Precio mínimo:</label>
+    <input type="number" id="precioMinimo">
+    <button onclick="filtrarPrecio()">Filtrar</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Cliente</th>
+                <th>Precio</th>
+                <th>IVA 21%</th>
+                <th>Precio Contado</th>
+                <th>Interés 10%</th>
+                <th>Precio con Interés</th>
+                <th>24 Cuotas</th>
+                <th>36 Cuotas</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+    <script src="basico.js"></script>
+
+</body>
+</html>
